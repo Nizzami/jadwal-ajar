@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class Teacher extends Model
 {
@@ -24,4 +25,9 @@ class Teacher extends Model
         'maksimal_jp_per_hari' => 'integer',
         'maksimal_jp_berturut_turut' => 'integer',
     ];
+
+public function teachingAssignments(): HasMany
+{
+    return $this->hasMany(TeachingAssignment::class);
+}
 }

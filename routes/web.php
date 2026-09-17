@@ -7,6 +7,7 @@ use App\Http\Controllers\SubjectController;
 use App\Http\Controllers\KelasController;
 use App\Http\Controllers\DayController;
 use App\Http\Controllers\TimeSlotController;
+use App\Http\Controllers\TeachingAssignmentController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -18,3 +19,4 @@ Route::resource('subjects', SubjectController::class);
 Route::resource('kelas', KelasController::class);
 Route::resource('days', DayController::class);
 Route::resource('time-slots', TimeSlotController::class);
+Route::resource('teaching-assignments', TeachingAssignmentController::class);
